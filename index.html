@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Wedding location</title>
+</head>
+<style>
+
+    body{
+        background-color: bisque;
+        font-family: "Source Sans Pro", sans-serif;
+    }
+    h1{
+        text-align: center;
+    }
+    h2{
+        text-align: center;
+    }
+    p{
+        font-size: 18px;
+        line-height: 1.5;
+        text-align: center;
+    }
+    img{
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    button{
+        display: block;
+        margin: 20px auto;
+        border: 1px solid rgb(165, 133, 93);
+        background: white;
+        font-size: 20px;
+        border-radius: 6px;
+        padding: 10px 15px;
+        transition: all 150ms ease-in-out;
+        font-family: "Source Sans Pro", sans-serif;
+    }
+    button:hover{
+        background: bisque;
+        cursor: pointer;
+    }
+    footer{
+        text-align: center;
+        margin: 10px 0;
+        font-size: 12px;
+    }
+    .container{
+        max-width: 600px;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        display: block;
+        margin: 0 auto;
+    }
+    .theme-button{
+        font-size: 10px;
+        background: #041C32;
+        color: white;
+        padding: 5 8px;
+    }
+    .theme-button:hover{
+        color: black;
+        background: white;
+    }
+    .beach-club-intro-pic{
+        border-radius: 8px;
+        transition: all 150ms ease-in-out;
+        margin-bottom: 10px;
+
+    }
+    .beach-club-intro-pic:hover{
+        filter: contrast(80%);
+        transform: scale(1.1);
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 15px;
+
+    }
+
+    .grid img{
+        width: 100%;
+    }
+
+    .dark{
+        background: #02111e;
+        color: white;
+    }
+
+    .dark .container{
+        background: #041C32;
+    }
+
+    .dark a{
+        color: bique;
+    }
+
+    .first-part-paragraph{
+        text-align: left;
+    }
+    
+    .second-part-paragraph{
+        text-align: center;
+    }
+</style>
+<body>
+    <button class="theme-button"> Change theme </button>
+    <div class="container">
+    <h1> Wedding location </h1>
+    <h2> BEACH CLUB HVAR (BONJ LE BAINS) </h2>
+    <a href = "https://adriaticweddings-croatia.com/wedding-venues/hvar/beach-club-hvar/"></a>
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/109/952/original/BeachClubHvar7.jpg?1704881837" alt="" class="beach-club-intro-pic"/>
+    <div class="grid">
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/109/951/original/hvarromantic.jpg?1704881806" alt=""/>
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/109/950/original/hvarevening.jpg?1704881797" alt=""/>
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/109/953/original/hvar.jpg?1704881862" alt=""/>
+         <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/109/949/original/hvarwed.jpg?1704881787" alt=""/>
+    </div>
+    <p>
+        <div class="first-part-paragraph">
+        We'd love for you to celebrate our wedding with us at Beach Club Hvar, an idyllic beachfront terrace gracing the Mediterranean shores with its unparalleled beauty.
+    </br> This venue presents a refined lounge area ensconced within the embrace of palm and pine trees - a perfect retreat for savoring exquisite cocktails amid our celebration.
+    </br> Amidst the festivities, immerse yourself in the cultural tapestry of Hvar. Wander to the nearby Fransiscan Monastery & Hanibaluc Lucic,  steeped in the historical legacy of this cherished locale. 
+</br> 
+</div>
+<div class="second-part-paragraph">
+</br>
+Address: 
+</br>
+Beach Club Hvar
+</br>
+Setaliste Tonija Petrica 
+</br>
+21450 Hvar
+</br>
+</br>
+We humbly extend this invitation, envisioning your esteemed presence as an integral part of this cherished celebration. 
+    </p>
+    </div>
+    <button class="location-button"> 
+        Visit location </button>
+    </div>
+    <footer> Coded by Anna Bannenberg-Kleinloog</footer>
+<script>
+    function changeTheme(){
+        let body = document.querySelector("body");
+
+       if (body.classList.contains("dark")){
+            body.classList.remove("dark");
+        }
+        else{
+        body.classList.add("dark");
+        }
+
+    }
+
+    function visitWebsite(){
+        window.open("https://adriaticweddings-croatia.com/wedding-venues/hvar/beach-club-hvar/");
+    }
+
+    let themeButton = document.querySelector(".theme-button");
+    themeButton.addEventListener("click", changeTheme); 
+
+    let locationButton = document.querySelector(".location-button");
+    locationButton.addEventListener("click", visitWebsite);
+
+    let introPic = document.querySelector(".beach-club-intro-pic");
+    introPic.addEventListener("click", visitWebsite);
+</script>
+</body>
+</html>
